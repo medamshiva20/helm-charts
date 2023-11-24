@@ -21,3 +21,6 @@ spec:
    containers:
     - name: nginx
       image: "nginx:{{ .Values.deployment.imageVersion }}"
+      ports:
+       - name: http-web-svc
+         containerPort: 80
