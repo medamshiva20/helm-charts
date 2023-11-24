@@ -5,7 +5,7 @@ metadata:
  labels:
   app: nginx
 spec:
- replicas: 10
+ replicas: {{ .Values.deployment.replicaCount }}
  selector:
   matchLabels:
    app: nginx 
@@ -20,4 +20,4 @@ spec:
   spec:
    containers:
     - name: nginx
-      image: nginx
+      image: "nginx:{{ .Values.deployment.imageVersion }}"
