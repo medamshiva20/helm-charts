@@ -5,7 +5,7 @@ metadata:
  labels:
   app: nginx
 spec:
- replicas: "{{ .values.deployment.replicasCount }}"
+ replicas: "{{ .Values.deployment.replicasCount }}"
  selector:
   matchLabels:
    app: nginx 
@@ -20,7 +20,7 @@ spec:
   spec:
    containers:
     - name: nginx
-      image: "nginx:{{ .values.deployment.imageVersion }}"
+      image: "nginx:{{ .Values.deployment.imageVersion }}"
       ports:
        - name: http-web-svc
          containerPort: 80
