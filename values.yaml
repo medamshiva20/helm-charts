@@ -1,5 +1,5 @@
-# deployment:
-#  imageVersion: latest
-#  replicaCount: 5
-# service:
-#  port: 80
+deployment:
+ replicasCount: 3
+ imageVersion: mainline-alpine3.18-perl
+service:
+ port: 80
